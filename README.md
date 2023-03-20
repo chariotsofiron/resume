@@ -1,16 +1,20 @@
 # Resume
 
-My resume, writen in latex.
+My resume and cover letter, writen in latex.
+
+## Dependencies
+
+```bash
+brew install basictex
+sudo tlmgr install enumitem
+```
 
 ## Build instructions
 
-```sh
-brew install basictex
-sudo tlmgr install enumitem
+```bash
+# Resume
 pdflatex resume.tex
+
+# Cover letter
+pdflatex "\\def\\company{Company Name}\\def\\position{Job Title}\\input{letter}"
 ```
-
-## Further reading
-
-- [Make a Resume in LaTeX!](https://drshika.me/2022/04/15/latex-resumes)
-- https://github.com/lukew3/resume
